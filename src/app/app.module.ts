@@ -1,10 +1,11 @@
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
+
 
 import { BsDropdownModule } from "ngx-bootstrap/dropdown";
 import { ProgressbarModule } from "ngx-bootstrap/progressbar";
@@ -21,19 +22,16 @@ import { PagesModule } from "./pages/pages.module";
 import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatSliderModule} from '@angular/material/slider';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { IndexComponent } from "./pages/index/index.component";
 import { ProfilepageComponent } from "./pages/examples/profilepage/profilepage.component";
 import { RegisterpageComponent } from "./pages/examples/registerpage/registerpage.component";
 import { LandingpageComponent } from "./pages/examples/landingpage/landingpage.component";
 import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
-import { MatchCardComponent } from './layout/match-card/match-card.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
-    MatchCardComponent
+    NavBarComponent
     // IndexComponent,
     // ProfilepageComponent,
     // RegisterpageComponent,
@@ -42,11 +40,12 @@ import { MatchCardComponent } from './layout/match-card/match-card.component';
   imports: [
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
     AppRoutingModule,
+    PagesModule,
     MatGridListModule,
-    MatSliderModule,
     // BsDropdownModule.forRoot(),
     // ProgressbarModule.forRoot(),
     // TooltipModule.forRoot(),

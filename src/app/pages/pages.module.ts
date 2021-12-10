@@ -1,8 +1,9 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { BsDropdownModule } from "ngx-bootstrap/dropdown";
 import { ProgressbarModule } from "ngx-bootstrap/progressbar";
@@ -22,13 +23,16 @@ import { ProfilepageComponent } from "./examples/profilepage/profilepage.compone
 import { RegisterpageComponent } from "./examples/registerpage/registerpage.component";
 import { LandingpageComponent } from "./examples/landingpage/landingpage.component";
 import { MatchesComponent } from './matches/matches.component';
+import { MatchCardComponent } from './blocks/match-card/match-card.component';
 
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule,
+    MatGridListModule,
     BsDropdownModule.forRoot(),
     ProgressbarModule.forRoot(),
     TooltipModule.forRoot(),
@@ -47,13 +51,14 @@ import { MatchesComponent } from './matches/matches.component';
     ProfilepageComponent,
     RegisterpageComponent,
     LandingpageComponent,
-    MatchesComponent
+    MatchesComponent,
+    MatchCardComponent
   ],
   exports: [
     IndexComponent,
     ProfilepageComponent,
     RegisterpageComponent,
-    LandingpageComponent
+    LandingpageComponent,
   ],
   providers: []
 })

@@ -21,7 +21,7 @@ import { PopoverModule } from "ngx-bootstrap/popover";
 
 import { IndexComponent } from "./index/index.component";
 import { ProfilepageComponent } from "./profilepage/profilepage.component";
-import { RegisterpageComponent } from "./examples/registerpage/registerpage.component";
+import { RegisterpageComponent } from "./registerpage/registerpage.component";
 import { LandingpageComponent } from "./examples/landingpage/landingpage.component";
 import { MatchesComponent } from './matches/matches.component';
 import { MatchCardComponent } from './blocks/match-card/match-card.component';

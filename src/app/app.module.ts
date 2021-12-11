@@ -6,6 +6,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 
 
 import { BsDropdownModule } from "ngx-bootstrap/dropdown";
@@ -26,7 +27,7 @@ import { environment } from 'src/environments/environment';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { IndexComponent } from "./pages/index/index.component";
 import { ProfilepageComponent } from "./pages/profilepage/profilepage.component";
-import { RegisterpageComponent } from "./pages/examples/registerpage/registerpage.component";
+import { RegisterpageComponent } from "./pages/registerpage/registerpage.component";
 import { LandingpageComponent } from "./pages/examples/landingpage/landingpage.component";
 import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
 @NgModule({
@@ -45,6 +46,7 @@ import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
     HttpClientModule,
     RouterModule,
     AppRoutingModule,
+    AngularFireAuthModule,
     PagesModule,
     MatGridListModule,
     // BsDropdownModule.forRoot(),
@@ -52,7 +54,6 @@ import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
     // TooltipModule.forRoot(),
     // CollapseModule.forRoot(),
     // TabsModule.forRoot(),
-    PagesModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     // PaginationModule.forRoot(),

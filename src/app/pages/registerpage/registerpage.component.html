@@ -1,1 +1,105 @@
-<p>registerpage works!</p>
+<div class="wrapper">
+    <div class="page-header">
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 offset-lg-0 offset-md-3">
+
+                        <div class="card card-register">
+                            <div class="card-header">
+                                <img alt="Card image" class="card-img" src="assets/img/square1-red.png" />
+
+                                <h2 class="card-title">Register</h2>
+                            </div>
+                            <div class="card-body">
+                                <form [formGroup]="registerForm" (ngSubmit)="onSubmitRegister()" class="form">
+                                    <div class="input-group" [ngClass]="{ 'input-group-focus': focus === true }">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="tim-icons icon-single-02"> </i>
+                                            </div>
+                                        </div>
+                                        <input formControlName="name" class="form-control" placeholder="Full Name" type="text" (focus)="focus = true" (blur)="focus = false" />
+                                    </div>
+                                    <span *ngIf="name && name.invalid && registerAttempt==true" style="color: red;">Name is required</span>
+                                    <div class="input-group" [ngClass]="{ 'input-group-focus': focus1 === true }">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="tim-icons icon-email-85"> </i>
+                                            </div>
+                                        </div>
+                                        <input formControlName="email" class="form-control" placeholder="Email" type="text" (focus)="focus1 = true" (blur)="focus1 = false" />
+                                    </div>
+                                    <span *ngIf="newEmail && newEmail.errors?.email && registerAttempt==true" style="color: red;">Not an email</span>
+                                    <span *ngIf="newEmail && newEmail.errors?.required && registerAttempt==true" style="color: red;">Email is required</span>
+                                    <div class="input-group" [ngClass]="{ 'input-group-focus': focus2 === true }">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="tim-icons icon-lock-circle"> </i>
+                                            </div>
+                                        </div>
+                                        <input formControlName="password" class="form-control" minlength="6" placeholder="Password" type="password" (focus)="focus2 = true" (blur)="focus2 = false" />
+                                    </div>
+                                    <span *ngIf="newPassword && newPassword.errors?.required && registerAttempt==true" style="color: red;">Password is required</span>
+                                    <span id="failedLogIn" style="display: none; color: red;">Incorrect password or email. Try again</span>
+
+                                    <div class="form-check text-left">
+                                        <label class="form-check-label">
+                                        <input formControlName="isAdmin" class="form-check-input" type="checkbox" />
+                                        <span class="form-check-sign"> </span> Are you a tournament organizer?
+                                        </label>
+                                        <span id="successRegister" style="display: none; color: green;">Success! Login now.</span>
+                                        <span id="failedRegister" style="display: none; color: red;">Failed to create a new account</span>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button class="btn btn-danger btn-round btn-lg">CREATE ACCOUNT
+                                    </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-md-6 offset-lg-0 offset-md-3">
+                        <div class="card card-register">
+                            <div class="card-header">
+                                <img alt="Card image" class="card-img" src="assets/img/square1-red.png" />
+                                <h2 class="card-title">Sign in</h2>
+                            </div>
+
+                            <div class="card-body">
+                                <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()" class="form">
+                                    <div class="input-group" [ngClass]="{ 'input-group-focus': focus3 === true }">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="tim-icons icon-email-85"> </i>
+                                            </div>
+                                        </div>
+                                        <input formControlName="email" class="form-control" placeholder="Email" type="text" (focus)="focus3 = true" (blur)="focus3 = false" />
+                                    </div>
+                                    <span *ngIf="loginEmail && loginEmail.invalid && loginAttempt==true" style="color: red;">Not an email!</span>
+                                    <div class="input-group" [ngClass]="{ 'input-group-focus': focus4 === true }">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="tim-icons icon-lock-circle"> </i>
+                                            </div>
+                                        </div>
+                                        <input formControlName="password" class="form-control" placeholder="Password" type="password" (focus)="focus4 = true" (blur)="focus4 = false" />
+                                    </div>
+                                    <span *ngIf="loginPassword && loginPassword.invalid && loginAttempt==true" style="color: red;">Passwords are 6 characters min!</span>
+                                    <span id="failedLogin" style="display: none; color: red;">Failed to login, check email or password!</span>
+                                    <div class="card-footer">
+                                        <button class="btn btn-danger btn-round btn-lg"> LOG IN </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="register-bg"></div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    

@@ -24,17 +24,7 @@ export class MatchService {
    addMatch(match:Match):Observable<DocumentReference>{
     return from(this.matchesCollection.add(match));
   }
-/*
-  getAll():any{
-    var matchListQuery:any;
-    this.matches$.subscribe( queriedItems => {
-      console.log(queriedItems);
-      matchListQuery = queriedItems;
-      return queriedItems;
-    });
-    return matchListQuery;
-  }
-*/
+
 //to be tested
   updateMatch(match:Match):Observable<void>{
     return from(

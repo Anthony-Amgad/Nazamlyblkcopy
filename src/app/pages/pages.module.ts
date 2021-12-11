@@ -1,9 +1,10 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FormsModule} from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { MatGridListModule } from '@angular/material/grid-list';
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { BsDropdownModule } from "ngx-bootstrap/dropdown";
 import { ProgressbarModule } from "ngx-bootstrap/progressbar";
@@ -19,7 +20,7 @@ import { JwBootstrapSwitchNg2Module } from "jw-bootstrap-switch-ng2";
 import { PopoverModule } from "ngx-bootstrap/popover";
 
 import { IndexComponent } from "./index/index.component";
-import { ProfilepageComponent } from "./examples/profilepage/profilepage.component";
+import { ProfilepageComponent } from "./profilepage/profilepage.component";
 import { RegisterpageComponent } from "./examples/registerpage/registerpage.component";
 import { LandingpageComponent } from "./examples/landingpage/landingpage.component";
 import { MatchesComponent } from './matches/matches.component';
@@ -30,9 +31,9 @@ import { MatchCardComponent } from './blocks/match-card/match-card.component';
     CommonModule,
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule,
     RouterModule,
     MatGridListModule,
+    ReactiveFormsModule,
     BsDropdownModule.forRoot(),
     ProgressbarModule.forRoot(),
     TooltipModule.forRoot(),

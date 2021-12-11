@@ -1,10 +1,11 @@
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FormsModule} from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
+import { ReactiveFormsModule } from "@angular/forms";
 
 
 import { BsDropdownModule } from "ngx-bootstrap/dropdown";
@@ -24,7 +25,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { IndexComponent } from "./pages/index/index.component";
-import { ProfilepageComponent } from "./pages/examples/profilepage/profilepage.component";
+import { ProfilepageComponent } from "./pages/profilepage/profilepage.component";
 import { RegisterpageComponent } from "./pages/examples/registerpage/registerpage.component";
 import { LandingpageComponent } from "./pages/examples/landingpage/landingpage.component";
 import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
